@@ -1,0 +1,12 @@
+/lib
+.DS_Store
+Thumbs.db
+/node_modules
+/tmp
+/.sass-cache
+/connect.lock
+/coverage/*
+/assets-vendor/*
+/libpeerconnection.log
+npm-debug.log
+testem.log

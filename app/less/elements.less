@@ -1,0 +1,228 @@
+/** Elements For Red Flash**/
+.redflash-container{
+	.container-fixed( 30px );
+
+	@media (min-width: @screen-sm-min) {
+		width: @redflash-container-sm;
+	}
+
+	@media (min-width: @screen-md-min) {
+		width: @redflash-container-md;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		width: @redflash-container-lg;
+	}
+}
+
+.navbar-redflash{
+	margin: 0;
+	border: 0;
+
+	.navbar-brand {
+		padding: 40px 0;
+		color: #fff;
+		font-weight: 600;
+		font-size: 20px;
+		height: auto;
+
+		strong{
+			color: #d1d1d1;
+			font-weight: 600;
+			font-size: 20px;
+		}
+
+		&:hover,
+		&:focus {
+		}
+
+		@media (max-width: @grid-float-breakpoint) {
+			padding: 15px 0;
+		}
+	}
+
+	.navbar-nav {
+		> li {
+			padding: 0 10px;
+
+			> a {
+				color: #fff;
+				font-weight: 600;
+				padding: 40px 0;
+				border-bottom: 3px solid #ff5454;
+
+				i{
+					color: #fff;
+				}
+
+				@media (max-width: @grid-float-breakpoint) {
+					padding: 10px 0;
+				}
+			}
+
+			&:hover > a, &:focus > a {
+				background-color: transparent;
+				border-bottom: 3px solid #fff;
+			}
+		}
+
+		> .active > a {
+			&,
+			&:hover,
+			&:focus {
+				border-bottom: 3px solid #fff;
+			}
+		}
+
+		@media screen and (min-width: @screen-phone){
+
+			> li.dropdown:hover {
+
+				.dropdown-menu{
+					right: auto;
+					left: 9px;
+					display: block;
+					background: #f2f2f3;
+					padding: 0;
+
+					> li{
+						padding: 0 10px;
+
+						> a{
+							border-bottom: 1px solid #bebdbe;
+							color: #bebdbe;
+							padding: 10px 0;
+							font-weight: 600;
+
+							&:hover{
+								background: transparent;
+								color: #ff5454;
+
+								&:after{
+									content: "\f105";
+									font-family: 'FontAwesome';
+									float: right;
+								}
+							}
+						}
+
+						&:last-child{
+
+							a{
+								border-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.navbar-toggle {
+		border-color: #ffaaaa;
+
+		&:hover,
+		&:focus {
+			background-color: @navbar-default-toggle-hover-bg;
+		}
+
+		.icon-bar {
+			background-color: #ffaaaa;
+		}
+	}
+}
+
+.navbar-redflash-white{
+	margin: 0;
+	border: 0;
+	background: #fff;
+	padding: 0 20px;
+
+	.navbar-header{
+		@media (max-width: @grid-float-breakpoint) {
+			border-bottom: 1px solid #ff5454;
+		}
+	}
+
+	.navbar-brand {
+		padding: 20px 0;
+		color: #ff5454;
+		font-weight: 600;
+		font-size: 20px;
+		height: auto;
+
+		strong{
+			color: #d1d1d1;
+			font-weight: 600;
+			font-size: 20px;
+		}
+
+		&:hover,
+		&:focus {
+		}
+
+		@media (max-width: @grid-float-breakpoint) {
+			padding: 15px 0;
+		}
+	}
+
+	.navbar-nav {
+		> li {
+			padding: 0;
+
+			> a {
+				color: #a9a9ae;
+				font-weight: 600;
+				padding: 20px 0;
+				display: inline-block;
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					border-bottom: 3px solid #ff5454;
+					color: #ff5454;
+				}
+
+				@media (max-width: @grid-float-breakpoint) {
+					padding: 15px 0;
+				}
+			}
+
+			@media (min-width: @grid-float-breakpoint) {
+				&:before{
+					content: "|";
+					margin: 0 10px;
+					color: #a9a9ae;
+					font-weight: 600;
+				}
+
+				&:first-child:before{
+					content: " ";
+					margin: 0;
+				}
+			}
+		}
+
+		> .active > a {
+			&,
+			&:hover,
+			&:focus {
+				border-bottom: 3px solid #ff5454;
+				color: #ff5454;
+			}
+		}
+	}
+
+	.navbar-toggle {
+		border-color: #ffaaaa;
+
+		&:hover,
+		&:focus {
+			background-color: @navbar-default-toggle-hover-bg;
+		}
+
+		.icon-bar {
+			background-color: #ffaaaa;
+		}
+	}
+}

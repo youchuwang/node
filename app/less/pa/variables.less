@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'HelveticaNeue';
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/helvetica/HelveticaNeueMed/HelveticaNeueMed.eot");
+    src: url("/fonts/helvetica/HelveticaNeueMed/HelveticaNeueMed.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/helvetica/HelveticaNeueMed/HelveticaNeueMed.woff") format("woff"),
+         url("/fonts/helvetica/HelveticaNeueMed/HelveticaNeueMed.ttf") format("truetype"),
+         url("/fonts/helvetica/HelveticaNeueMed/HelveticaNeueMed.svg#HelveticaNeueRegular") format("svg");
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+    font-style: normal;
+    src: url("/fonts/helvetica/HelveticaNeueLt/HelveticaNeueLt.eot");
+    src: url("/fonts/helvetica/HelveticaNeueLt/HelveticaNeueLt.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/helvetica/HelveticaNeueLt/HelveticaNeueLt.woff") format("woff"),
+         url("/fonts/helvetica/HelveticaNeueLt/HelveticaNeueLt.ttf") format("truetype"),
+         url("/fonts/helvetica/HelveticaNeueLt/HelveticaNeueLt.svg#HelveticaNeueLight") format("svg");
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    font-weight: 600;
+    font-style: normal;
+    src: url("/fonts/helvetica/HelveticaNeueBd/HelveticaNeueBd.eot");
+    src: url("/fonts/helvetica/HelveticaNeueBd/HelveticaNeueBd.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/helvetica/HelveticaNeueBd/HelveticaNeueBd.woff") format("woff"),
+         url("/fonts/helvetica/HelveticaNeueBd/HelveticaNeueBd.ttf") format("truetype"),
+         url("/fonts/helvetica/HelveticaNeueBd/HelveticaNeueBd.svg#HelveticaNeueBold") format("svg");
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/helvetica/HelveticaNeueHv/HelveticaNeueHv.eot");
+    src: url("/fonts/helvetica/HelveticaNeueHv/HelveticaNeueHv.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/helvetica/HelveticaNeueHv/HelveticaNeueHv.woff") format("woff"),
+         url("/fonts/helvetica/HelveticaNeueHv/HelveticaNeueHv.ttf") format("truetype"),
+         url("/fonts/helvetica/HelveticaNeueHv/HelveticaNeueHv.svg#HelveticaNeueRegular") format("svg");
+}
+
+@images: "/images/pa";
+
+@pa-container-tablet:             980px;
+@pa-container-sm:                 @pa-container-tablet;
+@pa-container-desktop:            980px;
+@pa-container-md:                 @pa-container-desktop;
+@pa-container-large-desktop:      980px;
+@pa-container-lg:                 @pa-container-large-desktop;
+
+@main-font-family : 'HelveticaNeue', sans-serif;
+
+.display-flex(){
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.display-inline-flex(){
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: inline-flex;
+}
+
+.transition-custom(@sec){
+    -webkit-transition: all @sec ease;
+    -moz-transition: all @sec ease;
+    -ms-transition: all @sec ease;
+    -o-transition: all @sec ease;
+    transition: all @sec ease;
+}
+
+.label-blue{
+    background: #4879be;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 1px 5px;
+    line-height: 10px;
+}
+
+.custom-select-box{
+    position: relative;
+    .clearfix();
+
+    .label{
+        .clearfix();
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .select-box-content{
+        .clearfix();
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        background: #e9eaeb;
+        border: 1px solid #e9eaeb;
+        padding: 5px 10px;
+
+        .display-list{
+            .clearfix();
+            cursor: pointer;
+            font-size: 12px;
+
+            i{
+                float: right;
+                color: #9d9fa2;
+                font-size: 18px;
+            }
+
+            .value{
+                float: left;
+                line-height: 18px;
+            }
+        }
+
+        &.edit-status{
+            position: absolute;
+            height: auto;
+            border-radius: 5px;
+            background: #fff;
+            border: 1px solid #b69984;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 20px;
+            z-index: 10;
+
+            .display-list{
+                display: none;
+            }
+
+            .edit-status-content{
+                display: block;
+            }
+        }
+
+        .edit-status-content{
+            border-right: 1px solid #b69984;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: none;
+
+            .input-section{
+                margin-bottom: 10px;
+                
+                input[type=text]{
+                    border-radius: 5px;
+                    border: 1px solid #b69984;
+                    width: 100%;
+                    padding: 0 10px;
+                    margin: 0;
+                    height: 30px;
+                }
+            }
+
+            .value-list{
+                .clearfix();
+
+                ul{
+                    .clearfix();
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li{
+                        border-bottom: 1px solid #b69984;
+                        padding: 2px 5px;
+                        cursor: pointer;
+
+                        div{
+                            .clearfix();
+                            font-size: 12px;
+                            display: inline-block;
+                            width: 100%;
+
+                            i{
+                                font-size: 5px;
+                                float: left;
+                                margin: 6px 5px 0 0;
+                            }
+                        }
+
+                        &:last-child{
+                            border: 0;
+                        }
+
+                        &:hover{
+                            background: #b69984;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn{
+    .button-variant(#fff; #aa8860; #aa8860);
+    .button-size( 5px; 10px; 12px; 12px; 0 );
+    border-radius: 5px;
+    font-weight: 400;
+
+    &.full-size{
+        width: 100%;
+    }
+
+    &.btn-yellow{
+        .button-variant(#fff; #aa8860; #aa8860);            
+    }
+
+    &.btn-large{
+        padding: 10px;
+    }
+
+    &.btn-no-radius{
+        border-radius: 0;
+    }
+}
+
+.nano.value-list {
+    max-height: 200px;
+}
+.nano {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+}
+.nano > .nano-content {
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    top: 0;
+    right: 0 !important;
+    bottom: 0;
+    left: 0;
+}
+.nano > .nano-content:focus {
+    outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+    display: none;
+}
+.nano > .nano-pane {
+    background: #fff;
+    position: absolute;
+    width: 3px;
+    right: -22px;
+    top: 0;
+    bottom: 0;
+    // visibility: hidden\9;
+    // opacity: .9;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.nano > .nano-pane > .nano-slider {
+    background: #b69984;
+    position: relative;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 3px;
+}
+// .nano:hover > .nano-pane,
+// .nano:hover .nano-pane.active,
+// .nano:hover .nano-pane.flashed {
+//     visibility: visible\9;
+//     opacity: 0.99;
+// }
+
+.quantity-price-dialog .nano{
+    height: 496px;
+}

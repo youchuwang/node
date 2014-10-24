@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "HelvNueOutline";
+    src: url("fonts/HelveticaNeueOut/HelveticaNeueOut.eot");
+    src: url("fonts/HelveticaNeueOut/HelveticaNeueOut.eot?#iefix") format("embedded-opentype"),
+         url("fonts/HelveticaNeueOut/HelveticaNeueOut.woff") format("woff"),
+         url("fonts/HelveticaNeueOut/HelveticaNeueOut.ttf") format("truetype"),
+         url("fonts/HelveticaNeueOut/HelveticaNeueOut.svg#HelvNueOutline") format("svg");
+    font-weight: book;
+    font-style: normal;
+}

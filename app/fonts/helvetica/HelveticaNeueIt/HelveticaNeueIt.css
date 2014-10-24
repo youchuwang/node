@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "HelveticaNeueItalic";
+    src: url("fonts/HelveticaNeueIt/HelveticaNeueIt.eot");
+    src: url("fonts/HelveticaNeueIt/HelveticaNeueIt.eot?#iefix") format("embedded-opentype"),
+         url("fonts/HelveticaNeueIt/HelveticaNeueIt.woff") format("woff"),
+         url("fonts/HelveticaNeueIt/HelveticaNeueIt.ttf") format("truetype"),
+         url("fonts/HelveticaNeueIt/HelveticaNeueIt.svg#HelveticaNeueItalic") format("svg");
+    font-weight: 100;
+    font-style: normal;
+}
